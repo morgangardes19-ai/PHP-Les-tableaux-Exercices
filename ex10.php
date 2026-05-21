@@ -45,6 +45,11 @@ $departements = [
     print_r($departements);
     echo '<pre>';
     ?>
+
+    <!-- Affichage avec var_dump, une sorte de console.log de PHP -->
+    <?php
+    var_dump($departements);
+    ?>
 </body>
 
 </html>
