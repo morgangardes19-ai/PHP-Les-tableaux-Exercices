@@ -1,4 +1,8 @@
 <?php
+
+/**
+ * Tableau qui prend en compte tous les départements des Hauts de France.
+ */
 $departements = [
     '02' => 'Aisne',
     '59' => 'Nord',
@@ -18,12 +22,28 @@ $departements = [
 </head>
 
 <body>
+    <!-- Afficher toutes les valeurs de ce tableau ainsi que les clés associés -->
     <?php
     foreach ($departements as $property => $propertyValue) { ?>
         <p>
             <?= 'Le départemenet ' . $propertyValue . ' a le numéro ' . $property .  PHP_EOL; ?>
         </p>
     <?php }
+    ?>
+
+
+    <!-- Vérifier si la clé 02 est dans le tableau -->
+    <?php
+    if (array_key_exists('02', $departements))
+        echo '02';
+    ?>
+
+
+    <!-- Afficher rapidement un tableau avec print_r -->
+    <?php
+    echo '<pre>';
+    print_r($departements);
+    echo '<pre>';
     ?>
 </body>
 
